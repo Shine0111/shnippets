@@ -29,17 +29,14 @@ export default function SnippetCreatePage() {
           Title
         </label>
         <input name="title" className="border rounded p-2 w-full" id="title" />
-      </div>
-      <div className="flex flex-col gap-4">
         <label htmlFor="code" className="w-12">
           Code
         </label>
         <textarea name="code" className="border rounded p-2 w-full" id="code" />
+        <button type="submit" className="rounded p-2 bg-blue-200">
+          Create
+        </button>
       </div>
-
-      <button type="submit" className="rounded p-2 bg-blue-200">
-        Create
-      </button>
     </form>
   );
 }
