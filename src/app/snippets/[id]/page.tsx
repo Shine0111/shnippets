@@ -46,3 +46,14 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
     </div>
   );
 }
+
+export async function generateStaticParams() {
+  // the name is obligatory
+  const snippets = await db.snippet.findMany();
+
+  return snippets.map((snippet) => {
+    return {
+      id: snippet.id.toString(),
+    };
+  });
+}
